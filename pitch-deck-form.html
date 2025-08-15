@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦊 FoxGuard Pitch Deck Download</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦊</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pitch-deck-form">
+        <div class="container">
+            <h1>🦊 FoxGuard Investor Pitch Deck</h1>
+            <p>Get instant access to our comprehensive investor presentation</p>
+            
+            <form name="pitch-deck" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="pitch-deck">
+                <input type="hidden" name="bot-field">
+                
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="company" placeholder="Company/Organization">
+                <input type="text" name="title" placeholder="Your Title">
+                <select name="investor-type" required>
+                    <option value="">Investor Type</option>
+                    <option value="Angel Investor">Angel Investor</option>
+                    <option value="VC Fund">VC Fund</option>
+                    <option value="Corporate Investor">Corporate Investor</option>
+                    <option value="Government/Grant">Government/Grant</option>
+                    <option value="Strategic Partner">Strategic Partner</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <textarea name="investment-interest" placeholder="Investment interests/portfolio focus (optional)" rows="3"></textarea>
+                
+                <button type="submit" class="btn btn-primary btn-large">Download Pitch Deck</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
