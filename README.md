@@ -1,6 +1,6 @@
-# 🦊 FoxGuard Website
+# 🦊 FoxKit Website
 
-Professional website for FoxGuard SMS Security - the world's first multi-dataset SMS threat detection platform.
+Professional website for FoxKit SMS Security - the world's first multi-dataset SMS threat detection platform.
 
 ## Features
 
@@ -11,7 +11,7 @@ Professional website for FoxGuard SMS Security - the world's first multi-dataset
 
 ## Deployment
 
-Hosted on Cloudflare Pages at: `foxguard.cardozaservices.com`
+Hosted on Cloudflare Pages at: `foxkit.cardozaservices.com`
 
 ## Contact
 
