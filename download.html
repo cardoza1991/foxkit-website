@@ -260,7 +260,7 @@
         
         async function checkDownloadAvailability() {
             try {
-                const response = await fetch('download.php?action=check');
+                const response = await fetch('/download?action=check');
                 const data = await response.json();
                 
                 downloadStats = data;
@@ -316,7 +316,7 @@
                 }
                 
                 // Create secure download link
-                const downloadUrl = 'download.php?action=download&t=' + Date.now();
+                const downloadUrl = '/download?action=download&t=' + Date.now();
                 
                 // Create hidden download link
                 const link = document.createElement('a');

@@ -1,0 +1,15 @@
+# Global security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# APK file headers
+/FoxKit-v1.1.0.apk
+  Content-Type: application/vnd.android.package-archive
+  Cache-Control: public, max-age=86400
+
+# Download function headers  
+/functions/download.js
+  Cache-Control: no-cache, no-store, must-revalidate

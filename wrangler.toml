@@ -1,0 +1,9 @@
+[env.production]
+name = "foxkit-website"
+compatibility_date = "2024-01-01"
+
+# KV namespace for download statistics
+[[env.production.kv_namespaces]]
+binding = "DOWNLOAD_STATS"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
