@@ -5,9 +5,10 @@
   X-XSS-Protection: 1; mode=block
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
-# APK file headers
+# APK file headers (versioned)
 /FoxKit-v1.1.0.apk
   Content-Type: application/vnd.android.package-archive
+  Content-Disposition: attachment; filename="FoxKit-v1.1.0-beta.apk"
   Cache-Control: public, max-age=86400
 
 # Download function headers  

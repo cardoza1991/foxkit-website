@@ -6,6 +6,8 @@
 const MAX_DOWNLOADS = 101;
 const RATE_LIMIT_WINDOW = 300; // 5 minutes
 const MAX_REQUESTS_PER_IP = 3;
+const FOXKIT_VERSION = 'v1.1.0';
+const APK_FILENAME = `FoxKit-${FOXKIT_VERSION}.apk`;
 
 export async function onRequest(context) {
     const { request, env } = context;
@@ -141,11 +143,13 @@ async function handleStats(env, clientIP, headers) {
     
     const stats = await getDownloadStats(env);
     return new Response(JSON.stringify({
+        version: FOXKIT_VERSION,
         total_downloads: stats.total_downloads,
         remaining_downloads: stats.remaining_downloads,
         percentage_used: Math.round((stats.total_downloads / MAX_DOWNLOADS) * 100 * 10) / 10,
         started: stats.started,
-        blocked_attempts: stats.blocked_attempts
+        blocked_attempts: stats.blocked_attempts,
+        max_downloads: MAX_DOWNLOADS
     }), {
         headers: { ...headers, 'Content-Type': 'application/json' }
     });
@@ -196,8 +200,8 @@ async function handleDownload(env, clientIP, userAgent, headers, context) {
     
     // Serve the APK file from Cloudflare R2 or redirect to GitHub
     try {
-        // Option 1: Redirect to GitHub raw file
-        const apkUrl = 'https://github.com/cardoza1991/foxkit-website/raw/main/FoxKit-v1.1.0.apk';
+        // Option 1: Redirect to versioned GitHub raw file
+        const apkUrl = `https://github.com/cardoza1991/foxkit-website/raw/main/${APK_FILENAME}`;
         
         // Log successful download
         stats.total_downloads++;
