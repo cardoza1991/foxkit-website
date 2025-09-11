@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦊 FoxKit Purchase - Premium SMS Security | Cardoza Services</title>
+    <link rel="icon" href="foxkit.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="foxkit.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <style>
+        .purchase-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 120px 0 80px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .premium-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.3);
+            border: 2px solid rgba(255, 215, 0, 0.6);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            color: #ffd700;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 500px;
+            color: #2d3436;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .price-display {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #00b894;
+            margin: 20px 0;
+        }
+        
+        .price-period {
+            font-size: 1.2rem;
+            color: #636e72;
+            font-weight: 500;
+        }
+        
+        .purchase-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #00b894, #00a085);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin: 30px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 184, 148, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .purchase-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 184, 148, 0.4);
+        }
+        
+        .purchase-btn.secondary {
+            background: linear-gradient(45deg, #6c5ce7, #5f4fcf);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
+        }
+        
+        .purchase-btn.secondary:hover {
+            box-shadow: 0 12px 35px rgba(108, 92, 231, 0.4);
+        }
+        
+        .features-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+        
+        .feature-list {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #00b894;
+        }
+        
+        .feature-list h3 {
+            color: #2d3436;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .feature-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f2f6;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list li:before {
+            content: "✅";
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .value-proposition {
+            background: linear-gradient(45deg, #ffeaa7, #fdcb6e);
+            color: #2d3436;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .guarantee-badge {
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .purchase-hero {
+                padding: 100px 20px 60px 20px;
+            }
+            .price-display {
+                font-size: 2.5rem;
+            }
+            .features-comparison {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Cardoza Services</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#foxkit">FoxKit</a></li>
+                <li><a href="#purchase" class="active">Purchase</a></li>
+                <li><a href="index.html#investors">Investors</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Purchase Hero -->
+    <section class="purchase-hero">
+        <div class="container">
+            <div class="premium-badge">
+                ⭐ PREMIUM SMS SECURITY - LIMITED TIME LAUNCH PRICE
+            </div>
+            
+            <h1>🦊 FoxKit SMS Security</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 20px;">Professional-Grade AI Protection</p>
+            
+            <div class="pricing-card">
+                <h3>Complete Protection Suite</h3>
+                <div class="price-display">$5</div>
+                <div class="price-period">One-Time Purchase • Lifetime Updates</div>
+                
+                <div class="guarantee-badge">
+                    🛡️ 30-Day Money Back Guarantee
+                </div>
+                
+                <a href="https://play.google.com/store/apps/details?id=com.cardoza.foxkit.security" class="purchase-btn">
+                    🛒 Buy Now on Google Play
+                </a>
+                
+                <a href="#enterprise" class="purchase-btn secondary">
+                    🏢 Enterprise Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section style="padding: 80px 20px; background: #f8f9fa;">
+        <div class="container">
+            <div class="value-proposition">
+                <h2>🎯 Why Choose FoxKit?</h2>
+                <p><strong>Competitors charge $50+/month for cloud-based solutions that expose your data.</strong></p>
+                <p><strong>FoxKit delivers superior protection for just $5 once, with 100% privacy.</strong></p>
+                <h3>Save $595+ per year compared to McAfee, Norton, or Bitdefender!</h3>
+            </div>
+
+            <div class="features-comparison">
+                <div class="feature-list">
+                    <h3>🚀 What You Get</h3>
+                    <ul>
+                        <li>99.75% AI Detection Accuracy</li>
+                        <li>140,000+ Threat Patterns</li>
+                        <li>11 Language Support</li>
+                        <li>Real-Time Protection (&lt;75ms)</li>
+                        <li>100% On-Device Processing</li>
+                        <li>PhishTank URL Database</li>
+                        <li>Device Security Assessment</li>
+                        <li>App Permission Monitor</li>
+                        <li>Network Security Scanning</li>
+                        <li>Lifetime Updates</li>
+                        <li>No Subscription Fees</li>
+                        <li>Zero Data Collection</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-list">
+                    <h3>💰 vs. Competitors</h3>
+                    <ul>
+                        <li>McAfee Mobile: $50/year</li>
+                        <li>Norton Mobile: $60/year</li>
+                        <li>Bitdefender: $40/year</li>
+                        <li>Lookout: $99/year</li>
+                        <li>Malwarebytes: $60/year</li>
+                        <li><strong>FoxKit: $5 ONCE</strong></li>
+                        <li>Better Accuracy (99.75% vs ~85%)</li>
+                        <li>Complete Privacy</li>
+                        <li>Faster Response</li>
+                        <li>No Cloud Dependency</li>
+                        <li>No Monthly Fees</li>
+                        <li>Enterprise-Grade Tech</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Section -->
+    <section id="enterprise" style="padding: 80px 20px; background: #2d3436; color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>🏢 Enterprise & Government Solutions</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Healthcare, Government, and Fortune 500 deployments available</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 40px 0;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px;">
+                        <h4>🏥 Healthcare</h4>
+                        <p>HIPAA-compliant deployment<br>Starting at $25/seat</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px;">
+                        <h4>🏛️ Government</h4>
+                        <p>Air-gapped security solutions<br>FedRAMP pathway available</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px;">
+                        <h4>🏢 Enterprise</h4>
+                        <p>Federated learning network<br>Custom threat intelligence</p>
+                    </div>
+                </div>
+                
+                <a href="mailto:michael.cardoza@cardozaservices.com?subject=Enterprise%20FoxKit%20Inquiry" class="purchase-btn">
+                    📧 Contact for Enterprise Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #2d3436; color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 Cardoza Services LLC. All rights reserved.</p>
+            <p><a href="privacy-policy.html" style="color: #00cec9;">Privacy Policy</a> • <a href="index.html" style="color: #00cec9;">← Back to Main Site</a></p>
+        </div>
+    </footer>
+</body>
+</html>

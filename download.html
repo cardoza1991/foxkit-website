@@ -3,389 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🦊 FoxKit Download - Secure Beta Access | Cardoza Services</title>
+    <title>FoxKit - Trial Ended - Purchase Required</title>
     <link rel="icon" href="foxkit.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="foxkit.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Security headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    
+    <meta http-equiv="refresh" content="3;url=purchase.html">
     <style>
-        .download-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 120px 0 80px 0;
+        body {
+            font-family: 'Inter', sans-serif;
             text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            margin: 0;
         }
-        
-        .security-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .download-counter {
-            background: rgba(255, 255, 255, 0.15);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 30px;
+        .redirect-card {
+            background: rgba(255,255,255,0.1);
+            padding: 50px;
             border-radius: 20px;
-            margin: 40px auto;
-            max-width: 500px;
+            max-width: 600px;
+            margin: 0 auto;
             backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
         }
-        
-        .counter-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #00ff88;
-            display: block;
-            margin: 10px 0;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 12px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            overflow: hidden;
-            margin: 20px 0;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(45deg, #00ff88, #00cc6a);
-            transition: width 0.3s ease;
-            border-radius: 6px;
-        }
-        
-        .download-btn {
+        .btn {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            background: linear-gradient(45deg, #00b894, #00a085);
             color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
+            padding: 15px 30px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
-            margin: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .download-btn:hover:not(:disabled) {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
-        }
-        
-        .download-btn:disabled {
-            background: #666;
-            cursor: not-allowed;
-            opacity: 0.6;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 20px;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-            border-left: 4px solid #667eea;
+            margin: 20px 10px;
             transition: transform 0.3s ease;
         }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .security-notice {
-            background: linear-gradient(45deg, #ffeaa7, #fdcb6e);
-            color: #2d3436;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: center;
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        @media (max-width: 768px) {
-            .download-hero {
-                padding: 100px 20px 60px 20px;
-            }
-            .counter-number {
-                font-size: 2rem;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-                padding: 0 20px;
-            }
+        .btn:hover {
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Cardoza Services</h2>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#foxkit">FoxKit</a></li>
-                <li><a href="#download" class="active">Download</a></li>
-                <li><a href="index.html#investors">Investors</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Download Hero -->
-    <section class="download-hero">
-        <div class="container">
-            <div class="security-badge">
-                🔒 SECURE LIMITED BETA - GITHUB PAGES PROTECTED
-            </div>
-            
-            <h1>🦊 FoxKit SMS Security</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 20px;">Advanced AI Protection - Limited Beta Access</p>
-            
-            <div class="download-counter">
-                <div style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #00ff88; margin-right: 10px;"></div>
-                <strong>Downloads Remaining</strong>
-                <span class="counter-number" id="downloadCounter">Loading...</span>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressBar"></div>
-                </div>
-                <small>Limited to 101 beta testers for security</small>
-            </div>
-            
-            <button class="download-btn pulse" id="downloadBtn" onclick="initiateSecureDownload()">
-                🔒 Secure Download FoxKit v1.1.0 (8.6MB)
-            </button>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section style="padding: 80px 0; background: #f8f9fa;">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>140,000+ Threat Patterns</h3>
-                    <p>Most comprehensive SMS threat database available with continuous updates</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>99.5% Detection Accuracy</h3>
-                    <p>Industry-leading AI-powered protection across 11 languages</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>100% Private Processing</h3>
-                    <p>All analysis on-device, zero data transmission to external servers</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Real-Time Protection</h3>
-                    <p>Instant threat detection and blocking with <75ms response time</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Security Notice -->
-    <section style="padding: 80px 20px;">
-        <div class="container">
-            <div class="security-notice">
-                <h3>🔐 Secure Beta Program</h3>
-                <p><strong>This is a limited secure beta program.</strong> Only 101 downloads are available to maintain security and collect focused feedback from real users.</p>
-                <p><strong>Requirements:</strong> Android 8.0+, Enable "Unknown Sources" in Security Settings</p>
-                <p><strong>Feedback:</strong> <a href="mailto:michael.cardoza@cardozaservices.com" style="color: #2d3436; font-weight: 600;">michael.cardoza@cardozaservices.com</a></p>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px; color: #636e72;">
-                <p><strong>Secured by GitHub Pages</strong> • <strong>Rate Limited</strong> • <strong>Bot Protected</strong></p>
-                <p>Download ID will be provided upon successful download</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer style="background: #2d3436; color: white; padding: 40px 0; text-align: center;">
-        <div class="container">
-            <p>&copy; 2025 Cardoza Services LLC. All rights reserved.</p>
-            <p><a href="index.html" style="color: #00cec9;">← Back to Main Site</a></p>
-        </div>
-    </footer>
-    
-    <script>
-        let downloadStats = null;
+    <div class="redirect-card">
+        <h1>🦊 FoxKit Trial Period Ended</h1>
+        <p style="font-size: 1.2rem; margin: 30px 0;">The free beta trial has concluded. FoxKit is now available for purchase at just $5 (one-time payment).</p>
         
-        async function checkDownloadAvailability() {
-            try {
-                const response = await fetch('/download?action=check');
-                const data = await response.json();
-                
-                downloadStats = data;
-                updateUI(data);
-            } catch (error) {
-                console.error('Failed to check availability:', error);
-                showError('Failed to connect to server');
-            }
-        }
+        <h2>✨ What You Get:</h2>
+        <ul style="text-align: left; max-width: 400px; margin: 20px auto;">
+            <li>99.75% AI threat detection accuracy</li>
+            <li>140,000+ threat patterns</li>
+            <li>11 language support</li>
+            <li>Lifetime updates</li>
+            <li>100% privacy (on-device processing)</li>
+            <li>No subscription fees</li>
+        </ul>
         
-        function updateUI(data) {
-            const counter = document.getElementById('downloadCounter');
-            const progressBar = document.getElementById('progressBar');
-            const downloadBtn = document.getElementById('downloadBtn');
-            
-            if (data.downloads_available) {
-                counter.textContent = data.remaining;
-                const percentage = ((101 - data.remaining) / 101) * 100;
-                progressBar.style.width = percentage + '%';
-                
-                downloadBtn.disabled = false;
-                
-                if (data.remaining <= 10) {
-                    counter.style.color = '#ffc107';
-                }
-            } else {
-                counter.textContent = '0';
-                progressBar.style.width = '100%';
-                downloadBtn.textContent = '❌ Beta Downloads Exhausted';
-                downloadBtn.disabled = true;
-                downloadBtn.classList.remove('pulse');
-            }
-        }
+        <p style="margin: 30px 0;"><strong>Redirecting to purchase page in 3 seconds...</strong></p>
         
-        async function initiateSecureDownload() {
-            const downloadBtn = document.getElementById('downloadBtn');
-            
-            if (!downloadStats || !downloadStats.downloads_available) {
-                showError('Downloads are no longer available');
-                return;
-            }
-            
-            // Disable button and show loading
-            downloadBtn.disabled = true;
-            downloadBtn.textContent = '🔒 Initiating Secure Download...';
-            downloadBtn.classList.remove('pulse');
-            
-            try {
-                // Verify device compatibility
-                if (!isAndroidDevice() && !confirm('This app is designed for Android devices. Continue anyway?')) {
-                    resetDownloadButton();
-                    return;
-                }
-                
-                // Create secure download link
-                const downloadUrl = '/download?action=download&t=' + Date.now();
-                
-                // Create hidden download link
-                const link = document.createElement('a');
-                link.href = downloadUrl;
-                link.download = 'FoxKit-v1.1.0-beta.apk';
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                
-                // Trigger download
-                link.click();
-                document.body.removeChild(link);
-                
-                // Update UI
-                downloadBtn.textContent = '✅ Download Started - Check Downloads';
-                downloadBtn.style.background = 'linear-gradient(45deg, #00b894, #00a085)';
-                
-                // Refresh stats after download
-                setTimeout(checkDownloadAvailability, 2000);
-                
-            } catch (error) {
-                console.error('Download failed:', error);
-                showError('Download failed. Please try again.');
-                resetDownloadButton();
-            }
-        }
-        
-        function isAndroidDevice() {
-            return /Android/i.test(navigator.userAgent);
-        }
-        
-        function resetDownloadButton() {
-            const downloadBtn = document.getElementById('downloadBtn');
-            downloadBtn.disabled = false;
-            downloadBtn.textContent = '🔒 Secure Download FoxKit v1.1.0 (8.6MB)';
-            downloadBtn.style.background = 'linear-gradient(45deg, #ff6b6b, #ee5a52)';
-            downloadBtn.classList.add('pulse');
-        }
-        
-        function showError(message) {
-            const errorDiv = document.createElement('div');
-            errorDiv.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: #ff6b6b;
-                color: white;
-                padding: 15px 20px;
-                border-radius: 10px;
-                z-index: 1000;
-                font-weight: 600;
-                box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
-            `;
-            errorDiv.textContent = message;
-            document.body.appendChild(errorDiv);
-            
-            setTimeout(() => {
-                if (document.body.contains(errorDiv)) {
-                    document.body.removeChild(errorDiv);
-                }
-            }, 5000);
-        }
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            checkDownloadAvailability();
-            
-            // Refresh stats every 30 seconds
-            setInterval(checkDownloadAvailability, 30000);
-        });
-    </script>
+        <a href="purchase.html" class="btn">Purchase Now - $5</a>
+        <a href="https://play.google.com/store/apps/details?id=com.cardoza.foxkit.security" class="btn">Google Play Store</a>
+    </div>
 </body>
 </html>
